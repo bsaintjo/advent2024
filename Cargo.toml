@@ -1,0 +1,9 @@
+[workspace]
+members = ["days/day-01", "days/day-02"]
+
+[package]
+name = "advent2024"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
