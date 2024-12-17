@@ -169,29 +169,6 @@ impl Puzzle {
     }
 }
 
-struct Windows<'a> {
-    row: usize,
-    col: usize,
-    length: usize,
-    width: usize,
-    puzzle: &'a Puzzle
-}
-
-impl<'a> Iterator for Windows<'a> {
-    type Item = &'a [&'a [u8]];
-
-    fn next(&mut self) -> Option<Self::Item> {
-        if (self.col + self.width) >= self.puzzle.n_cols() && ((self.row + self.length) >= self.puzzle.n_rows()){
-            return None;
-        }
-        if (self.col + self.width) >=self.puzzle.n_cols() {
-            self.col = 0;
-            self.row += 1;
-        }
-        todo!()
-    }
-}
-
 #[cfg(test)]
 mod test {
     use super::*;
